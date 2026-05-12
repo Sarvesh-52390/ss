@@ -1,0 +1,570 @@
+<!-- =========================
+        index.html
+========================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#18c25c"
+  >
+
+  <title>S.S TYRE CARE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <!-- PARTICLES -->
+
+  <div class="particles"></div>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="container nav-container">
+
+      <div class="logo">
+
+        <img
+          src="logo.png"
+          alt="Logo"
+        >
+
+        <div class="logo-text">
+
+          <h2>S.S TYRE CARE</h2>
+
+          <p>Wheel Alignment & Tyre Care</p>
+
+        </div>
+
+      </div>
+
+      <ul class="nav-links">
+
+        <li><a href="#home">Home</a></li>
+
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#services">Services</a></li>
+
+        <li><a href="#why">Why?</a></li>
+
+        <li><a href="#gallery">Workshop</a></li>
+
+        <li><a href="#brands">Brands</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+      <h1>
+        PRECISION.<br>
+        PERFORMANCE.<br>
+        PERFECTION.
+      </h1>
+
+      <p>
+        Premium Wheel Alignment & Tyre Care Centre
+        in Sundarapuram, Coimbatore.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button
+          class="btn btn-primary"
+          onclick="scrollToContact()"
+        >
+          Book Service
+        </button>
+
+        <button
+          class="btn btn-secondary"
+          onclick="scrollToWorkshop()"
+        >
+          View Workshop
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        About Us
+      </h2>
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <h3>
+            Built For Performance
+          </h3>
+
+          <p>
+            Founded by Suresh Kumar,
+            S.S Tyre Care provides premium
+            wheel alignment, wheel balancing
+            and tyre services.
+          </p>
+
+          <p>
+            Our workshop combines modern automotive technology with professional service standards to deliver reliable, accurate, and high-quality vehicle care for every customer. Backed by more than 20+ years of hands-on industry experience, we have built a strong reputation for trust, precision, and customer satisfaction in wheel alignment, wheel balancing, tyre services, and complete automotive care. By combining advanced equipment with skilled workmanship, we ensure every vehicle receives the attention and performance it deserves, helping customers enjoy a smoother, safer, and more comfortable driving experience. 🚗🔧✨
+
+          </p>
+
+        </div>
+
+        <div class="about-image">
+
+          <img
+            src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg"
+            alt="Workshop"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section id="services">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Premium Services
+      </h2>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            🛞
+          </div>
+
+          <h3>
+            Wheel Alignment
+          </h3>
+
+          <p>
+            Precision computerized wheel
+            alignment for smoother driving
+            and longer tyre life.
+          </p>
+
+        </div>
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            ⚙️
+          </div>
+
+          <h3>
+            Wheel Balancing
+          </h3>
+
+          <p>
+            Removes vibration and improves
+            driving comfort at high speeds.
+          </p>
+
+        </div>
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            🔧
+          </div>
+
+          <h3>
+            Tubeless Tyre Repair
+          </h3>
+
+          <p>
+            Professional puncture repair
+            and leak fixing for tubeless tyres.
+          </p>
+
+        </div>
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            🚗
+          </div>
+
+          <h3>
+            Tyre Sales
+          </h3>
+
+          <p>
+            Premium tyre brands with
+            expert fitting support.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WHY SECTION -->
+
+  <section class="why-section" id="why">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Why Alignment & Balancing?
+      </h2>
+
+      <div class="why-grid">
+
+        <div class="why-card">
+
+          <h3>
+            🛞 Wheel Alignment
+          </h3>
+
+          <ul>
+
+            <li>✔ Vehicle pulls to one side</li>
+
+            <li>✔ Uneven tyre wear</li>
+
+            <li>✔ Steering vibration</li>
+
+            <li>✔ Steering not straight</li>
+
+            <li>✔ Recommended every 5,000 KM</li>
+
+          </ul>
+
+        </div>
+
+        <div class="why-card">
+
+          <h3>
+            ⚙️ Wheel Balancing
+          </h3>
+
+          <ul>
+
+            <li>✔ Steering shakes at high speed</li>
+
+            <li>✔ Cabin vibration</li>
+
+            <li>✔ Reduced comfort</li>
+
+            <li>✔ After tyre replacement</li>
+
+            <li>✔ Recommended every 5,000 KM</li>
+
+          </ul>
+
+        </div>
+
+        <div class="why-card">
+
+          <h3>
+            🔧 Tubeless Tyre Repair
+          </h3>
+
+          <ul>
+
+            <li>✔ Air pressure dropping frequently</li>
+
+            <li>✔ Nail or puncture damage</li>
+
+            <li>✔ Sidewall leakage</li>
+
+            <li>✔ Valve air leakage</li>
+
+            <li>✔ Immediate repair prevents tyre damage</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+
+  <section class="gallery" id="gallery">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Workshop Showcase
+      </h2>
+
+      <div class="gallery-grid">
+
+        <img
+          src="https://images.pexels.com/photos/3807329/pexels-photo-3807329.jpeg"
+          alt="Wheel Alignment"
+        >
+
+        <img
+          src="https://images.pexels.com/photos/6873088/pexels-photo-6873088.jpeg"
+          alt="Wheel Balancing"
+        >
+
+        <img
+          src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg"
+          alt="Tubeless Tyre Repair"
+        >
+
+        <img
+          src="https://images.pexels.com/photos/6872147/pexels-photo-6872147.jpeg"
+          alt="Tyre Service"
+        >
+
+        <img
+          src="https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg"
+          alt="Alignment Machine"
+        >
+
+        <img
+          src="https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg"
+          alt="Tyre Work"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+ <!-- BRANDS -->
+
+<section class="brands" id="brands">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Trusted Tyre Brands
+    </h2>
+
+    <div class="brand-grid">
+
+      <!-- YOUR SHOP LOGO -->
+
+      <div class="brand-card">
+
+        <img
+          src="logo.png"
+          alt="S.S TYRE CARE"
+        >
+
+      </div>
+
+      <!-- BRIDGESTONE -->
+
+      <div class="brand-card">
+
+        <img
+          src="https://1000logos.net/wp-content/uploads/2020/04/Bridgestone-Logo.png"
+          alt="Bridgestone"
+        >
+
+      </div>
+
+      <!-- CEAT -->
+
+      <div class="brand-card">
+
+        <img
+          src="https://companieslogo.com/img/orig/CEATLTD.NS_BIG-2b5f0fd3.png"
+          alt="CEAT"
+        >
+
+      </div>
+
+      <!-- APOLLO TYRES -->
+
+      <div class="brand-card">
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/8/8b/Apollo_Tyres_logo.png"
+          alt="Apollo Tyres"
+        >
+
+      </div>
+
+      <!-- MICHELIN -->
+
+      <div class="brand-card">
+
+        <img
+          src="https://1000logos.net/wp-content/uploads/2018/04/Michelin-logo.png"
+          alt="Michelin"
+        >
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Contact Us
+      </h2>
+
+      <div class="contact-wrapper">
+
+        <div class="contact-card">
+
+          <h3>
+            Workshop Details
+          </h3>
+
+          <p>
+            👨‍🔧 Founder: Suresh Kumar
+          </p>
+
+          <p>
+            📞 +91 9842238460
+          </p>
+
+          <p>
+            📍 LIC Colony,
+            Pollachi Main Road,
+            Sundarapuram,
+            Coimbatore - 641021
+          </p>
+
+        </div>
+
+        <div class="contact-card">
+
+          <h3>
+            Book Service
+          </h3>
+
+          <form
+            class="contact-form"
+            id="whatsappForm"
+          >
+
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter Name"
+              required
+            >
+
+            <input
+              type="text"
+              id="mobile"
+              placeholder="Mobile Number"
+              required
+            >
+
+            <textarea
+              rows="6"
+              id="message"
+              placeholder="Vehicle problem"
+              required
+            ></textarea>
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+            >
+              Send Inquiry
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © 2026 S.S TYRE CARE
+      </p>
+
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
