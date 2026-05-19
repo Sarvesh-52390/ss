@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>S.S TYRE CARE | Wheel Alignment & Tyre Care</title>
   
+  <link rel="icon" type="image/png" href="logo.png">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,36 +16,59 @@
 
   <div class="light-grid"></div>
 
-  <nav>
-    <div class="container nav-container">
-      <div class="logo">
-        <img src="logo.png" class="logo-icon" alt="SS Tyre Care Logo">
-        <div class="logo-text">
-          <h2>S.S TYRE CARE</h2>
-          <p>Precision Mobility</p>
+  <header class="fixed-header">
+    
+    <nav class="nav-glass shimmer-effect floating-header">
+      <div class="container nav-container">
+        <div class="logo">
+          <img src="logo.png" class="logo-icon" alt="SS Tyre Care Logo">
+          <div class="logo-text">
+            <h2>S.S TYRE CARE</h2>
+            <p>Precision Mobility</p>
+          </div>
+        </div>
+        
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-ghost-btn">Home</a></li>
+          <li><a href="#about" class="nav-ghost-btn">About</a></li>
+          <li><a href="#services" class="nav-ghost-btn">Services</a></li>
+          <li><a href="#gallery" class="nav-ghost-btn">Workshop</a></li>
+          <li><a href="#brands" class="nav-ghost-btn">Brands</a></li>
+          <li><a href="#feedback" class="nav-ghost-btn">Feedback</a></li>
+        </ul>
+        
+        <div class="nav-controls">
+          <button class="btn btn-green nav-btn" onclick="scrollToContact()">Book Service</button>
+          <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+          </div>
         </div>
       </div>
-      
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-ghost-btn">Home</a></li>
-        <li><a href="#about" class="nav-ghost-btn">About</a></li>
-        <li><a href="#services" class="nav-ghost-btn">Services</a></li>
-        <li><a href="#gallery" class="nav-ghost-btn">Workshop</a></li>
-        <li><a href="#contact" class="nav-ghost-btn">Contact</a></li>
-      </ul>
-      
-      <button class="btn btn-green nav-btn" onclick="scrollToContact()">Book Service</button>
+    </nav>
+
+    <div class="mobile-menu-wrapper floating-header">
+      <div class="mobile-menu nav-glass" id="mobileMenu">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#services" onclick="toggleMenu()">Services</a>
+        <a href="#why" onclick="toggleMenu()">Why Us?</a>
+        <a href="#gallery" onclick="toggleMenu()">Workshop</a>
+        <a href="#brands" onclick="toggleMenu()">Brands</a>
+        <a href="#feedback" onclick="toggleMenu()">Feedback</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+      </div>
     </div>
-  </nav>
+    
+  </header>
 
   <section class="hero" id="home">
     <div class="hero-content">
-      <div class="pill-badge">
+      <div class="pill-badge reveal-drop floating-drop">
         <span>Premium Care Center</span>
       </div>
-      <h1 class="clean-title">Precision.<br>Performance.<br><span class="text-green">Perfection.</span></h1>
-      <p class="hero-subtitle">Premium Wheel Alignment & Tyre Care Centre in Sundarapuram, Coimbatore.</p>
-      <div class="hero-buttons">
+      <h1 class="clean-title reveal-drop" style="transition-delay: 0.1s;">Precision.<br>Performance.<br><span class="text-green">Perfection.</span></h1>
+      <p class="hero-subtitle reveal-drop" style="transition-delay: 0.2s;">Premium Wheel Alignment & Tyre Care Centre in Sundarapuram, Coimbatore.</p>
+      <div class="hero-buttons reveal-drop" style="transition-delay: 0.3s;">
         <button class="btn btn-green" onclick="scrollToContact()">Book Service</button>
         <button class="btn btn-light" onclick="scrollToWorkshop()">View Workshop</button>
       </div>
@@ -55,12 +80,12 @@
       <div class="about-grid">
         <div class="reveal">
           <h2 class="section-title left-align">About Us</h2>
-          <p class="lead-text" style="color: var(--text-dark);">Built For Performance.</p>
-          <p style="color: var(--text-body);">Founded by Suresh Kumar, S.S Tyre Care provides wheel alignment, wheel balancing and tubeless tyre repair services.</p>
-          <p style="color: var(--text-body);">Our workshop combines modern automotive technology with professional service standards to deliver reliable, accurate, and high-quality vehicle care for every customer. Backed by more than 20+ years of hands-on industry experience, we ensure every vehicle receives the attention and performance it deserves.</p>
+          <p class="lead-text" style="color: var(--text-dark);">Engineering a Safer, Smoother Drive.</p>
+          <p style="color: var(--text-body);">Founded by automotive specialist Suresh Kumar, S.S Tyre Care isn't just a repair shop—it’s a precision calibration center for your vehicle.</p>
+          <p style="color: var(--text-body);">We understand that your tyres are the only contact point between your car and the road. That’s why we combine advanced diagnostic technology with deep mechanical expertise. Backed by over two decades (20+ years) of hands-on industry experience, our mission is simple: to deliver unparalleled accuracy, maximize your tyre lifespan, and ensure every customer drives away with complete peace of mind.</p>
         </div>
         <div class="about-image reveal">
-          <img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg" alt="Workshop">
+          <img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg" alt="Workshop" class="floating-drop" style="animation-duration: 5s;">
         </div>
       </div>
     </div>
@@ -70,20 +95,20 @@
     <div class="container">
       <h2 class="section-title reveal text-center">Premium Services</h2>
       <div class="services-grid">
-        <div class="float-card reveal">
-          <div class="card-icon">🛞</div>
-          <h3>Wheel Alignment</h3>
-          <p>Precision computerized alignment for smoother driving and extended tyre lifespan.</p>
+        <div class="float-card fluid-hover reveal shimmer-effect">
+          <div class="card-icon floating-drop">🛞</div>
+          <h3>3D Wheel Alignment</h3>
+          <p>Utilizing state-of-the-art computerized 3D imaging technology, we restore your steering geometry to factory specifications, ensuring dead-straight tracking and maximum tyre longevity.</p>
         </div>
-        <div class="float-card reveal">
-          <div class="card-icon">⚙️</div>
-          <h3>Wheel Balancing</h3>
-          <p>Improves comfort and removes high-speed steering wheel vibration.</p>
+        <div class="float-card fluid-hover reveal shimmer-effect">
+          <div class="card-icon floating-drop" style="animation-delay: 0.5s;">⚙️</div>
+          <h3>Dynamic Balancing</h3>
+          <p>We eliminate high-speed cabin vibration and steering wheel shake through high-fidelity balancing, granting you a whisper-quiet ride and protecting your suspension.</p>
         </div>
-        <div class="float-card reveal">
-          <div class="card-icon">🔧</div>
-          <h3>Tubeless Tyre Repair</h3>
-          <p>Professional, highly reliable puncture repair service using vulcanized patches.</p>
+        <div class="float-card fluid-hover reveal shimmer-effect">
+          <div class="card-icon floating-drop" style="animation-delay: 1s;">🔧</div>
+          <h3>Advanced Tubeless Repair</h3>
+          <p>We provide comprehensive repair solutions—including mushroom plugs, string plugs, and permanent vulcanized patching—ensuring structural safety regardless of the puncture type.</p>
         </div>
       </div>
     </div>
@@ -91,34 +116,55 @@
 
   <section id="why">
     <div class="container">
-      <h2 class="section-title reveal text-center">Why Alignment & Balancing?</h2>
+      <h2 class="section-title reveal text-center">When To Visit Us?</h2>
+      <p class="text-center reveal" style="margin-bottom: 30px; font-weight: 500;">Watch out for these common warning signs on your vehicle.</p>
+      
       <div class="why-grid">
-        <div class="float-card reveal">
+        <div class="float-card fluid-hover reveal shimmer-effect">
           <h3 class="accent-text">🛞 Wheel Alignment</h3>
           <ul class="clean-list">
-            <li>Vehicle pulls one side</li>
-            <li>Uneven tyre wear</li>
-            <li>Steering vibration</li>
-            <li>Recommended every 5000 KM</li>
+            <li>Vehicle drifts or pulls to one side</li>
+            <li>Uneven or rapid shoulder wear</li>
+            <li>Steering wheel sits crooked</li>
+            <li>Recommended every 5,000 KM</li>
           </ul>
         </div>
-        <div class="float-card reveal">
+        <div class="float-card fluid-hover reveal shimmer-effect">
           <h3 class="accent-text">⚙️ Wheel Balancing</h3>
           <ul class="clean-list">
-            <li>Steering shake</li>
-            <li>Cabin vibration</li>
-            <li>Reduced comfort</li>
-            <li>After tyre replacement</li>
+            <li>Steering shake at highway speeds</li>
+            <li>Heavy cabin or seat vibration</li>
+            <li>Unexplained suspension fatigue</li>
+            <li>Required after every tyre swap</li>
           </ul>
         </div>
-        <div class="float-card reveal">
+        <div class="float-card fluid-hover reveal shimmer-effect">
           <h3 class="accent-text">🔧 Tubeless Repair</h3>
           <ul class="clean-list">
-            <li>Nail puncture</li>
-            <li>Air pressure drop</li>
-            <li>Valve leakage</li>
-            <li>Prevent tyre damage</li>
+            <li>Nail puncture or visible debris</li>
+            <li>Frequent air pressure drops</li>
+            <li>Valve stem leakage</li>
+            <li>Crucial to prevent blowout damage</li>
           </ul>
+        </div>
+      </div>
+
+      <h2 class="section-title reveal text-center" style="margin-top: 70px;">Why Choose S.S Tyre Care?</h2>
+      <div class="why-grid">
+        <div class="float-card fluid-hover reveal shimmer-effect text-center p-small">
+          <h3 class="accent-text floating-drop" style="font-size: 32px; margin-bottom: 15px;">🏆</h3>
+          <h3>Master-Level Expertise</h3>
+          <p>Two decades of dedicated, hands-on experience means we’ve seen—and solved—every alignment issue imaginable. Your vehicle is in master hands.</p>
+        </div>
+        <div class="float-card fluid-hover reveal shimmer-effect text-center p-small">
+          <h3 class="accent-text floating-drop" style="font-size: 32px; margin-bottom: 15px; animation-delay: 0.5s;">🎯</h3>
+          <h3>Computerized Precision</h3>
+          <p>We don't rely on guesswork. Our modern diagnostic equipment calibrates your wheels down to the millimeter for absolutely flawless handling.</p>
+        </div>
+        <div class="float-card fluid-hover reveal shimmer-effect text-center p-small">
+          <h3 class="accent-text floating-drop" style="font-size: 32px; margin-bottom: 15px; animation-delay: 1s;">🤝</h3>
+          <h3>Transparent Integrity</h3>
+          <p>Integrity is our core component. We provide crystal-clear explanations, no hidden fees, and only recommend the services your vehicle genuinely needs.</p>
         </div>
       </div>
     </div>
@@ -128,9 +174,9 @@
     <div class="container">
       <h2 class="section-title reveal text-center">Workshop Showcase</h2>
       <div class="gallery-grid">
-        <div class="gallery-img reveal"><img src="https://images.pexels.com/photos/3807329/pexels-photo-3807329.jpeg" alt="Gallery"></div>
-        <div class="gallery-img reveal"><img src="https://images.pexels.com/photos/6873088/pexels-photo-6873088.jpeg" alt="Gallery"></div>
-        <div class="gallery-img reveal"><img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg" alt="Gallery"></div>
+        <div class="gallery-img fluid-hover reveal"><img src="https://images.pexels.com/photos/3807329/pexels-photo-3807329.jpeg" alt="Gallery"></div>
+        <div class="gallery-img fluid-hover reveal"><img src="https://images.pexels.com/photos/6873088/pexels-photo-6873088.jpeg" alt="Gallery"></div>
+        <div class="gallery-img fluid-hover reveal"><img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg" alt="Gallery"></div>
       </div>
     </div>
   </section>
@@ -139,20 +185,51 @@
     <div class="container">
       <h2 class="section-title reveal text-center">Trusted Tyre Brands</h2>
       <div class="brand-grid">
-        <div class="brand-card reveal">
-          <img src="logo.png" alt="SS Tyre Care">
+        <div class="brand-card fluid-hover reveal">
+          <img src="michelin.png" alt="Michelin" class="floating-drop">
         </div>
-        <div class="brand-card reveal">
-          <img src="https://1000logos.net/wp-content/uploads/2020/04/Bridgestone-Logo.png" alt="Bridgestone">
+        <div class="brand-card fluid-hover reveal">
+          <img src="bridgestone.png" alt="Bridgestone" class="floating-drop" style="animation-delay: 0.2s;">
         </div>
-        <div class="brand-card reveal">
-          <img src="https://companieslogo.com/img/orig/CEATLTD.NS_BIG-2b5f0fd3.png" alt="CEAT">
+        <div class="brand-card fluid-hover reveal">
+          <img src="goodyear.png" alt="Goodyear" class="floating-drop" style="animation-delay: 0.4s;">
         </div>
-        <div class="brand-card reveal">
-          <img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Apollo_Tyres_logo.png" alt="Apollo Tyres">
+        <div class="brand-card fluid-hover reveal">
+          <img src="apollo.png" alt="Apollo Tyres" class="floating-drop" style="animation-delay: 0.6s;">
         </div>
-        <div class="brand-card reveal">
-          <img src="https://1000logos.net/wp-content/uploads/2018/04/Michelin-logo.png" alt="Michelin">
+        <div class="brand-card fluid-hover reveal">
+          <img src="ceat.png" alt="CEAT" class="floating-drop" style="animation-delay: 0.8s;">
+        </div>
+        <div class="brand-card fluid-hover reveal">
+          <img src="mrf.png" alt="MRF" class="floating-drop" style="animation-delay: 1.0s;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="feedback">
+    <div class="container">
+      <h2 class="section-title reveal text-center" style="margin-bottom: 40px;">Customer Feedback</h2>
+      <div class="contact-wrapper">
+        <div class="float-card fluid-hover reveal shimmer-effect" style="display: flex; flex-direction: column; justify-content: center;">
+          <h3 class="accent-text" style="font-size: 28px; margin-bottom: 15px;">Rate Your Pit Stop!</h3>
+          <p style="font-size: 16px; line-height: 1.8;">We are obsessed with perfection, and your experience is our true benchmark. Did we deliver the smooth ride you expected? Let us know! Every piece of feedback goes directly to our founder, Suresh Kumar, ensuring we continue to elevate our standards.</p>
+        </div>
+        <div class="float-card fluid-hover reveal shimmer-effect">
+          <h3 class="mb-4">Submit Your Review</h3>
+          <form class="clean-form" id="feedbackForm">
+            <input type="text" id="feedName" placeholder="Your Name" required>
+            <select id="feedRating" required>
+              <option value="" disabled selected>Select Rating</option>
+              <option value="5 Stars ⭐⭐⭐⭐⭐">5 Stars ⭐⭐⭐⭐⭐</option>
+              <option value="4 Stars ⭐⭐⭐⭐">4 Stars ⭐⭐⭐⭐</option>
+              <option value="3 Stars ⭐⭐⭐">3 Stars ⭐⭐⭐</option>
+              <option value="2 Stars ⭐⭐">2 Stars ⭐⭐</option>
+              <option value="1 Star ⭐">1 Star ⭐</option>
+            </select>
+            <textarea id="feedMessage" rows="3" placeholder="Tell us about your visit..." required></textarea>
+            <button type="submit" class="btn btn-green w-100">Send Feedback</button>
+          </form>
         </div>
       </div>
     </div>
@@ -160,24 +237,31 @@
 
   <section id="contact">
     <div class="container">
-      <h2 class="section-title reveal text-center" style="margin-bottom: 50px;">Contact Us</h2>
       <div class="contact-wrapper">
-        <div class="float-card reveal">
-          <h3 style="margin-bottom: 20px;">Workshop Details</h3>
-          <div class="contact-info mt-4">
-            <p><strong>👨‍🔧 Founder:</strong> Suresh Kumar</p>
-            <p><strong>📞 Mobile:</strong> +91 9003352390</p>
-            <p><strong>📍 Location:</strong> LIC Colony, Pollachi Main Road,<br>Sundarapuram, Coimbatore - 641021</p>
+        <div class="contact-column">
+          <h2 class="section-title reveal text-center" style="margin-bottom: 30px; font-size: clamp(24px, 4vw, 36px);">Book Service</h2>
+          <div class="float-card fluid-hover reveal shimmer-effect">
+            <h3 class="mb-4">Send Inquiry</h3>
+            <form class="clean-form" id="whatsappForm">
+              <input type="text" id="name" placeholder="Name" required>
+              <input type="text" id="mobile" placeholder="Mobile" required>
+              <textarea id="message" rows="3" placeholder="Vehicle Issue" required></textarea>
+              <button type="submit" class="btn btn-green w-100">Send Inquiry</button>
+            </form>
           </div>
         </div>
-        <div class="float-card reveal">
-          <h3 class="mb-4">Send Inquiry</h3>
-          <form class="clean-form" id="whatsappForm">
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="text" id="mobile" placeholder="Mobile" required>
-            <textarea id="message" rows="4" placeholder="Vehicle Issue" required></textarea>
-            <button type="submit" class="btn btn-green w-100">Send via WhatsApp</button>
-          </form>
+
+        <div class="contact-column">
+          <h2 class="section-title reveal text-center" style="margin-bottom: 30px; font-size: clamp(24px, 4vw, 36px);">Contact Us</h2>
+          <div class="float-card fluid-hover reveal shimmer-effect">
+            <h3 style="margin-bottom: 25px;">Workshop Details</h3>
+            <div class="contact-info">
+              <p><strong>👨‍🔧 Founder:</strong> Suresh Kumar</p>
+              <p><strong>📞 Mobile:</strong> +91 9003352390</p>
+              <p><strong>✉️ Email:</strong> <a href="mailto:sstcsuresh@gmail.com" class="map-link">sstcsuresh@gmail.com</a></p>
+              <p><strong>📍 Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=LIC+Colony,+Pollachi+Main+Road,+Sundarapuram,+Coimbatore" target="_blank" class="map-link">LIC Colony, Pollachi Main Road,<br>Sundarapuram, Coimbatore - 641021</a></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
