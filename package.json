@@ -10,6 +10,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "lucide-react": "^1.16.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.3.0"
   }
 }
