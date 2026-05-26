@@ -285,6 +285,56 @@ section { padding: 75px 0; overflow: hidden; }
 .about-grid p { font-size: 16px; margin-bottom: 15px; }
 .about-image img { width: 100%; height: auto; border-radius: 32px; box-shadow: var(--shadow-soft); display: block; }
 
+/* =========================================
+   FOUNDER SECTION STYLES
+   ========================================= */
+
+.founder-glass-card {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 50px;
+  backdrop-filter: blur(10px);
+}
+
+.founder-img-col {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.founder-text-col {
+  flex: 1.2;
+}
+
+.founder-stats-row {
+  display: flex;
+  gap: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 25px;
+  margin-top: 30px;
+}
+
+/* MOBILE VIEW: Triggers when screen is smaller than 900px */
+@media (max-width: 900px) {
+  .founder-glass-card {
+    flex-direction: column; 
+    padding: 30px 20px;
+    gap: 30px;
+  }
+  
+  .founder-img-col img {
+    max-width: 300px !important; 
+  }
+  
+  .founder-stats-row {
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
 /* ========================================= */
 /* --- SERVICES CAROUSEL & CARDS --- */
 /* ========================================= */
