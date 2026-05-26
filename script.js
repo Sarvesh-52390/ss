@@ -30,7 +30,7 @@ if (inquiryForm) {
         const mobile = document.getElementById('mobile').value;
         const message = document.getElementById('message').value;
 
-        const url = `https://wa.me/919003352390?text=🚗 *S.S TYRE CARE INQUIRY*%0A%0A👤 Name: ${name}%0A📞 Mobile: ${mobile}%0A🛠️ Issue: ${message}`;
+        const url = `https://wa.me/919842238460?text=🚗 *S.S TYRE CARE INQUIRY*%0A%0A👤 Name: ${name}%0A📞 Mobile: ${mobile}%0A🛠️ Issue: ${message}`;
         window.open(url, '_blank');
         inquiryForm.reset(); 
     });
@@ -45,7 +45,7 @@ if (feedbackForm) {
         const feedRating = document.getElementById('feedRating').value;
         const feedMessage = document.getElementById('feedMessage').value;
 
-        const url = `https://wa.me/919003352390?text=⭐ *S.S TYRE CARE FEEDBACK*%0A%0A👤 Customer: ${feedName}%0A📊 Rating: ${feedRating}%0A💬 Comments: ${feedMessage}`;
+        const url = `https://wa.me/919842238460?text=⭐ *S.S TYRE CARE FEEDBACK*%0A%0A👤 Customer: ${feedName}%0A📊 Rating: ${feedRating}%0A💬 Comments: ${feedMessage}`;
         window.open(url, '_blank');
         feedbackForm.reset(); 
     });
