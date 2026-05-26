@@ -286,11 +286,12 @@ section { padding: 75px 0; overflow: hidden; }
 .about-image img { width: 100%; height: auto; border-radius: 32px; box-shadow: var(--shadow-soft); display: block; }
 
 /* =========================================
-   FOUNDER SECTION STYLES
+   FOUNDER SECTION - BULLETPROOF GRID
    ========================================= */
 
 .founder-glass-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* 2 Columns for Desktop */
   align-items: center;
   gap: 50px;
   background: rgba(255, 255, 255, 0.03);
@@ -300,39 +301,77 @@ section { padding: 75px 0; overflow: hidden; }
   backdrop-filter: blur(10px);
 }
 
-.founder-img-col {
-  flex: 1;
+.founder-img-wrapper {
   text-align: center;
   position: relative;
 }
 
-.founder-text-col {
-  flex: 1.2;
+.founder-img-wrapper img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.founder-pill-badge {
+  position: absolute; 
+  bottom: -15px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  background: #cecbcb; 
+  border: 1px solid #202221; 
+  white-space: nowrap; 
+  padding: 8px 16px; 
+  border-radius: 50px;
+  color: #146130; 
+  font-weight: 600; 
+  font-size: 14px;
 }
 
 .founder-stats-row {
-  display: flex;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Columns for stats */
+  gap: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 25px;
   margin-top: 30px;
 }
 
-/* MOBILE VIEW: Triggers when screen is smaller than 900px */
+.stat-item h4 {
+  color: #238949; 
+  font-size: 32px; 
+  font-weight: 700; 
+  margin: 0 0 5px 0;
+}
+
+.stat-item p {
+  font-size: 14px; 
+  color: #000000; 
+  margin: 0;
+}
+
+/* =========================================
+   STRICT MOBILE RULES
+   ========================================= */
 @media (max-width: 900px) {
   .founder-glass-card {
-    flex-direction: column; 
+    grid-template-columns: 1fr; /* Forces 1 Column on Mobile */
     padding: 30px 20px;
-    gap: 30px;
+    gap: 40px;
   }
   
-  .founder-img-col img {
-    max-width: 300px !important; 
+  .founder-img-wrapper img {
+    max-width: 280px; /* Shrinks image slightly for phones */
   }
-  
+
   .founder-stats-row {
-    justify-content: space-between;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr; /* Keeps stats in a row */
+    text-align: center;
+  }
+  
+  .stat-item h4 {
+    font-size: 24px; /* Slightly smaller numbers on phone */
   }
 }
 /* ========================================= */
