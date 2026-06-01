@@ -2058,7 +2058,20 @@ footer a:hover {
   .floating-wa, .floating-feedback { width: 54px; height: 54px; }
   .floating-wa img { width: 26px; height: 26px; }
   .floating-feedback { font-size: 20px; }
-  .float-hint { display: none; }
+  /* Restored Mobile Hints */
+  .float-hint { 
+    display: block; 
+    right: 65px; 
+    font-size: 11.5px; 
+    padding: 8px 14px; 
+  }
+  
+  /* Trigger the cinematic animation on mobile tap */
+  .floating-wa:active + .float-hint,
+  .floating-feedback:active + .float-hint {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
   
   .modal-content { padding: 30px 22px; }
   .footer-inner { flex-direction: column; text-align: center; }
