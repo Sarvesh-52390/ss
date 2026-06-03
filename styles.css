@@ -305,15 +305,79 @@ footer a:hover { color: var(--accent); }
 .close-modal { position: absolute; top: 20px; right: 20px; background: transparent; border: none; color: var(--text-secondary); font-size: 20px; cursor: none; }
 .close-modal:hover { color: #ff4757; }
 
-/* FLOATING BUTTONS */
-.floating-group { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 16px; z-index: 1000; }
-.float-btn-wrapper { position: relative; display: flex; align-items: center; justify-content: flex-end; }
-.float-hint { position: absolute; right: 75px; background: var(--bg-card); padding: 8px 16px; border-radius: 50px; font-size: 12px; font-weight: bold; border: 1px solid var(--border-accent); color: white; opacity: 0; pointer-events: none; transition: 0.4s; transform: translateX(10px); }
-.float-btn-wrapper:hover .float-hint { opacity: 1; transform: translateX(0); }
-.floating-wa, .floating-feedback { width: 60px; height: 60px; border-radius: 50%; border: none; font-size: 24px; cursor: none; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
-.floating-wa { background: #25D366; color: white; box-shadow: 0 8px 30px rgba(37,211,102,0.4); }
+/* ============================================
+   PERFECTED FLOATING BUTTONS & HINTS
+   ============================================ */
+.floating-group { 
+  position: fixed; bottom: 30px; right: 30px; 
+  display: flex; flex-direction: column; gap: 20px; z-index: 1000; 
+}
+
+.float-btn-wrapper { 
+  position: relative; 
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-end;
+  /* Fixed width container prevents hint from stealing hover */
+  width: 300px; 
+  height: 60px;
+}
+
+.float-hint { 
+  position: absolute; 
+  right: 75px; 
+  background: var(--bg-card); 
+  padding: 8px 16px; 
+  border-radius: 50px; 
+  font-size: 12px; 
+  font-weight: bold; 
+  border: 1px solid var(--border-accent); 
+  color: white; 
+  white-space: nowrap;
+  opacity: 0; 
+  pointer-events: none; /* KEY: Mouse passes through hint to the button */
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-out; 
+  transform: translateX(10px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* This class is added by JS to trigger the initial appearance */
+.float-hint.show-hint {
+  animation: cinematicHint 5s ease-in-out forwards;
+}
+
+@keyframes cinematicHint {
+  0% { opacity: 0; transform: translateX(20px); }
+  20%, 80% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(20px); }
+}
+
+/* Hovering the wrapper makes the hint inside stay visible */
+.float-btn-wrapper:hover .float-hint { 
+  opacity: 1 !important; 
+  transform: translateX(0) !important; 
+  animation: none !important; 
+}
+
+/* Floating Buttons */
+.floating-wa, .floating-feedback { 
+  width: 60px; height: 60px; border-radius: 50%; border: none; 
+  cursor: pointer; display: flex; align-items: center; justify-content: center; 
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); 
+}
+.floating-wa { background: #25D366; box-shadow: 0 8px 30px rgba(37,211,102,0.4); }
 .floating-feedback { background: var(--bg-card); border: 1px solid var(--border); box-shadow: 0 8px 30px rgba(0,0,0,0.5); }
-.floating-wa:hover, .floating-feedback:hover { transform: scale(1.1); }
+.floating-wa:hover, .floating-feedback:hover { transform: scale(1.15); }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .floating-group { bottom: 20px; right: 20px; }
+  .float-hint { 
+    right: 70px; opacity: 0.8; transform: translateX(0); 
+    background: rgba(0,0,0,0.6); border: none; 
+    text-shadow: 0 1px 3px #000;
+  }
+}
 
 /* MOBILE RESPONSIVE GLOBALS */
 @media (max-width: 992px) {
@@ -363,4 +427,53 @@ footer a:hover { color: var(--accent); }
   100% {
     box-shadow: 0 0 25px rgba(24, 194, 92, 0.6), inset 0 0 12px rgba(24, 194, 92, 0.3);
   }
+}
+/* ============================================
+   PERFECTED FLOATING BUTTONS
+   ============================================ */
+.floating-group { 
+  position: fixed; bottom: 30px; right: 30px; 
+  display: flex; flex-direction: column; gap: 16px; z-index: 1000; 
+}
+
+.float-btn-wrapper { 
+  position: relative; 
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-end;
+  height: 60px; /* Force height so the hover area is contained */
+}
+
+.float-hint { 
+  position: absolute; right: 75px; 
+  background: var(--bg-card); 
+  padding: 8px 16px; border-radius: 50px; 
+  font-size: 12px; font-weight: bold; 
+  border: 1px solid var(--border-accent); 
+  color: white; 
+  opacity: 0; 
+  /* Pointer-events: none is critical here */
+  pointer-events: none; 
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); 
+  transform: translateX(10px);
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Individual Triggered Animations */
+.float-btn-wrapper:nth-child(1) .float-hint { animation: cinematicHint 5s ease forwards; animation-delay: 1.5s; }
+.float-btn-wrapper:nth-child(2) .float-hint { animation: cinematicHint 5s ease forwards; animation-delay: 2.2s; }
+
+@keyframes cinematicHint {
+  0% { opacity: 0; transform: translateX(20px); }
+  20% { opacity: 1; transform: translateX(0); }
+  80% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(20px); }
+}
+
+/* ONLY show the hint of the specific wrapper being hovered */
+.float-btn-wrapper:hover .float-hint { 
+  opacity: 1 !important; 
+  transform: translateX(0) !important; 
+  animation: none !important; /* Stop the auto-trigger */
 }

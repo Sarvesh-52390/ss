@@ -384,3 +384,22 @@ function initCinematicCarousels() {
     updateCarousel(); startTimer(); window.addEventListener('resize', updateCarousel);
   });
 }
+// Add this to your DOMContentLoaded function in script.js
+// Replace your existing DOMContentLoaded trigger block with this:
+document.addEventListener("DOMContentLoaded", () => {
+  // Trigger hint animations one by one
+  const hints = document.querySelectorAll('.float-hint');
+  
+  if (window.innerWidth > 768) {
+    setTimeout(() => {
+      hints.forEach((hint, index) => {
+        // Adding the class triggers the CSS animation
+        setTimeout(() => {
+          hint.classList.add('show-hint');
+        }, index * 400); // 400ms delay between each
+      });
+    }, 1500);
+  }
+
+  initCinematicCarousels();
+});
