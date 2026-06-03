@@ -4,53 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>S.S TYRE CARE | Precision Mobility</title>
+
   <meta name="description" content="S.S Tyre Care in Sundarapuram, Coimbatore. Professional 3D wheel alignment, dynamic balancing, and premium tyre sales.">
   <meta name="keywords" content="Wheel Alignment Sundarapuram, Tyre Shop Coimbatore, 3D Wheel Alignment, Dynamic Balancing, Two Wheeler Tyres, S.S Tyre Care">
 
-  <meta property="og:title" content="S.S TYRE CARE | Precision Mobility">
-  <meta property="og:description" content="Premium Wheel Alignment, Balancing & Tyre Sales in Sundarapuram. Drive with perfection.">
-  <meta property="og:image" content="images/logo.png">
-  <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="images/logo.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- PARTICLE CANVAS BACKGROUND -->
+  <!-- BACKGROUNDS & CURSOR -->
   <canvas id="particleCanvas"></canvas>
-
-  <!-- CUSTOM CURSOR -->
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- GRID BACKGROUND -->
   <div class="bg-grid"></div>
 
-  <!-- ===================== HEADER ===================== -->
+  <!-- HEADER -->
   <header class="fixed-header">
     <nav class="nav-glass shimmer-effect floating-header">
       <div class="container nav-container">
         <div class="logo">
-          <img src="images/logo.png" class="logo-icon" alt="SS Tyre Care Logo">
+          <img src="images/logo.png" class="logo-icon" alt="SS Tyre Care Logo" onerror="this.style.display='none'">
           <div class="logo-text">
             <h2>S.S TYRE CARE</h2>
             <p>Precision Mobility</p>
           </div>
         </div>
-
         <ul class="nav-links">
           <li><a href="#home" class="nav-ghost-btn">Home</a></li>
           <li><a href="#about" class="nav-ghost-btn">About</a></li>
           <li><a href="#services" class="nav-ghost-btn">Services</a></li>
           <li><a href="#gallery" class="nav-ghost-btn">Workshop</a></li>
-          <li><a href="#brands" class="nav-ghost-btn">Brands</a></li>
-          <li><a href="#feedback" class="nav-ghost-btn">Feedback</a></li>
+          <li><a href="#testimonials" class="nav-ghost-btn">Reviews</a></li>
         </ul>
-
         <div class="nav-controls">
           <button class="nav-cta" onclick="openModal('bookingModal')">Book Service</button>
           <div class="hamburger" onclick="toggleMenu()">
@@ -59,76 +48,46 @@
         </div>
       </div>
     </nav>
-
     <div class="mobile-menu-wrapper floating-header">
       <div class="mobile-menu nav-glass" id="mobileMenu">
         <a href="#home" onclick="toggleMenu()">Home</a>
         <a href="#about" onclick="toggleMenu()">About</a>
         <a href="#services" onclick="toggleMenu()">Services</a>
-        <a href="#why" onclick="toggleMenu()">Why Us?</a>
         <a href="#gallery" onclick="toggleMenu()">Workshop</a>
-        <a href="#brands" onclick="toggleMenu()">Brands</a>
         <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
-        <a href="#feedback" onclick="toggleMenu()">Feedback</a>
         <a href="#contact" onclick="toggleMenu()">Contact</a>
       </div>
     </div>
   </header>
 
-  <!-- ===================== HERO ===================== -->
+  <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-bg"></div>
+    <div class="hero-bg" id="heroBg"></div>
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
     <div class="hero-scanline"></div>
-
     <div class="hero-content">
-      <div class="pill-badge reveal-drop">Premium Care Center — Sundarapuram, Coimbatore</div>
-
+      <div class="pill-badge reveal-drop">Premium Care Center — Sundarapuram</div>
       <h1 class="clean-title reveal-drop" style="transition-delay:0.1s">
-        Precision.<br>
-        Performance.<br>
-        <em>Perfection.</em>
+        Precision.<br>Performance.<br><em>Perfection.</em>
       </h1>
-
       <p class="hero-subtitle reveal-drop" style="transition-delay:0.2s">
         Advanced 3D wheel alignment, dynamic balancing & premium tyre solutions — engineered for the road ahead.
       </p>
-
       <div class="hero-buttons reveal-drop" style="transition-delay:0.3s">
-        <button class="btn btn-green" onclick="openModal('bookingModal')">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
-          Book a Service
-        </button>
-        <button class="btn btn-light" onclick="scrollToWorkshop()">
-          View Workshop
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
+        <button class="btn btn-green" onclick="openModal('bookingModal')">Book a Service</button>
+        <button class="btn btn-light glow-pill" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Explore Services</button>
       </div>
     </div>
-
-    <!-- Floating stats bar -->
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num">25+</span>
-        <span class="hero-stat-label">Years Exp.</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">10k+</span>
-        <span class="hero-stat-label">Vehicles</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">3D</span>
-        <span class="hero-stat-label">Technology</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">100%</span>
-        <span class="hero-stat-label">Precision</span>
-      </div>
+    <div class="hero-stats reveal-drop" style="transition-delay:0.5s">
+      <div class="hero-stat"><span class="hero-stat-num">25+</span><span class="hero-stat-label">Years Exp.</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">10k+</span><span class="hero-stat-label">Vehicles</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">3D</span><span class="hero-stat-label">Technology</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">100%</span><span class="hero-stat-label">Precision</span></div>
     </div>
   </section>
 
-  <!-- ===================== ABOUT ===================== -->
+  <!-- ABOUT -->
   <section class="about" id="about">
     <div class="container">
       <div class="about-grid">
@@ -138,15 +97,14 @@
           <div class="section-divider left"></div>
           <p class="lead-text">More than a repair shop — a precision calibration center.</p>
           <p>Founded by automotive specialist Suresh Kumar, S.S Tyre Care combines advanced diagnostic technology with deep mechanical expertise.</p>
-          <p>Your tyres are the only contact point between your car and the road. With over two decades of hands-on experience, our mission is simple: unparalleled accuracy, maximum tyre lifespan, and complete peace of mind.</p>
           <div style="margin-top: 32px;">
-            <button class="btn btn-outline-green" onclick="openModal('bookingModal')">Get a Free Check-Up after your service</button>
+           <button class="btn btn-outline-green glow-pill" onclick="openModal('bookingModal')">✨ Get Free Check-Up after first alignment within a month or 2000 km</button>
           </div>
         </div>
         <div class="about-image-wrap reveal-right">
-          <img src="images/about.jpg" alt="Workshop" loading="lazy">
+          <img src="images/about.jpg" alt="Workshop" loading="lazy" onerror="this.style.display='none'">
           <div class="about-image-badge">
-            <span class="badge-num">20+</span>
+            <span class="badge-num">25+</span>
             <span class="badge-label">Years of<br>Mastery</span>
           </div>
         </div>
@@ -154,8 +112,8 @@
     </div>
   </section>
 
-  <!-- ===================== FOUNDER ===================== -->
-  <section id="founder" style="padding-bottom:100px; background: var(--bg-deep);">
+  <!-- FOUNDER -->
+  <section id="founder" style="background: var(--bg-deep); padding-bottom: 100px;">
     <div class="container">
       <div class="text-center reveal" style="margin-bottom:48px">
         <div class="section-eyebrow" style="justify-content:center">The Man Behind It</div>
@@ -165,7 +123,7 @@
 
       <div class="founder-glass-card shimmer-effect reveal">
         <div class="founder-img-wrapper">
-          <img src="images/founder.jpg" alt="Suresh Kumar - Founder" loading="lazy">
+          <img src="images/founder.jpg" alt="Suresh Kumar - Founder" loading="lazy" onerror="this.style.display='none'">
           <div class="founder-pill-badge">🎖️ 25+ Years Experience</div>
         </div>
 
@@ -193,295 +151,231 @@
     </div>
   </section>
 
-  <!-- ===================== SERVICES ===================== -->
-  <section id="services">
+  <!-- SERVICES (CINEMATIC CAROUSEL) -->
+  <section id="services" style="background: var(--bg-surface); padding-bottom: 120px; overflow: hidden;">
     <div class="container">
-      <div class="text-center reveal" style="margin-bottom: 12px;">
+      <div class="text-center reveal" style="margin-bottom: 40px;">
         <div class="section-eyebrow" style="justify-content:center">What We Do</div>
         <h2 class="section-title">Premium Services</h2>
         <div class="section-divider"></div>
       </div>
-      <p class="text-center reveal" style="margin-bottom:12px;">Swipe to explore our technical capabilities.</p>
+    </div>
 
-      <div class="services-carousel reveal">
-        
-        <!-- CARD 1: ALIGNMENT (SLIDER) -->
-        <div class="service-card shimmer-effect">
-          <div class="service-img-slider">
-            <img src="images/service1a.jpg" alt="3D Wheel Alignment View 1">
-            <img src="images/service1b.jpg" alt="3D Wheel Alignment View 2" class="fade-img">
-          </div>
-          <div class="service-content">
-            <div class="card-icon">🛞</div>
+    <div class="cinematic-carousel">
+      <div class="c-track">
+        <div class="c-card">
+          <div class="c-bg" style="background-image: url('images/service1a.jpg'); background-color: #111;"></div>
+          <div class="c-gradient"></div>
+          <div class="c-content">
+            <div class="c-icon">🛞</div>
             <h3>3D Wheel Alignment</h3>
-            <p>State-of-the-art computerized 3D imaging restores your steering geometry to factory specifications, ensuring dead-straight tracking and maximum tyre longevity.</p>
+            <p>State-of-the-art computerized 3D imaging restores your steering geometry to factory specifications.</p>
           </div>
         </div>
-
-        <!-- CARD 2: BALANCING (SINGLE IMAGE) -->
-        <div class="service-card shimmer-effect">
-          <img src="images/service2a.jpg" alt="Dynamic Wheel Balancing" class="service-img">
-          <div class="service-content">
-            <div class="card-icon">⚙️</div>
+        <div class="c-card">
+          <div class="c-bg" style="background-image: url('images/service2a.jpg'); background-color: #222;"></div>
+          <div class="c-gradient"></div>
+          <div class="c-content">
+            <div class="c-icon">⚙️</div>
             <h3>Dynamic Balancing</h3>
-            <p>We eliminate high-speed cabin vibration and steering wheel shake through high-fidelity balancing, granting a whisper-quiet ride and protecting your suspension from premature wear.</p>
+            <p>Eliminate high-speed cabin vibration and steering wheel shake through high-fidelity balancing.</p>
           </div>
         </div>
-
-        <!-- CARD 3: REPAIR (SINGLE IMAGE) -->
-        <div class="service-card shimmer-effect">
-          <img src="images/service3a.jpg" alt="Advanced Tubeless Repair" class="service-img">
-          <div class="service-content">
-            <div class="card-icon">🔧</div>
+        <div class="c-card">
+          <div class="c-bg" style="background-image: url('images/service3a.jpg'); background-color: #333;"></div>
+          <div class="c-gradient"></div>
+          <div class="c-content">
+            <div class="c-icon">🔧</div>
             <h3>Advanced Tubeless Repair</h3>
-            <p>Comprehensive repair solutions — mushroom plugs, string plugs, and permanent vulcanized patching — ensuring optimal structural safety regardless of the puncture location.</p>
+            <p>Mushroom plugs and vulcanized patching ensuring optimal structural safety regardless of the puncture.</p>
           </div>
         </div>
-
-        <!-- CARD 4: TYRES (SLIDER SETUP FOR FUTURE) -->
-        <div class="service-card shimmer-effect">
-          <div class="service-img-slider">
-            <img src="images/service4a.jpg" alt="Premium Tyre Sales">
-          </div>
-          <div class="service-content">
-            <div class="card-icon">🌟</div>
+        <div class="c-card">
+          <div class="c-bg" style="background-image: url('images/service4a.jpg'); background-color: #111;"></div>
+          <div class="c-gradient"></div>
+          <div class="c-content">
+            <div class="c-icon">🌟</div>
             <h3>Brand New Tyres</h3>
-            <p>Massive multi-brand inventory of factory-fresh tyres for all vehicles — premium rubber for family sedans, high-grip for motorcycles, and durable treads for daily scooters.</p>
+            <p>Massive multi-brand inventory of factory-fresh tyres for all vehicles — premium rubber for family sedans to bikes.</p>
           </div>
         </div>
-
-        <!-- CARD 5: FREE ASSURANCE ALIGNMENT (SINGLE IMAGE) -->
-        <div class="service-card shimmer-effect">
-          <img src="images/service5.jpg" alt="Complimentary Alignment Check" class="service-img">
-          <div class="service-content">
-            <div class="card-icon">🛡️</div>
+        <div class="c-card">
+          <div class="c-bg" style="background-image: url('images/service5.jpg'); background-color: #222;"></div>
+          <div class="c-gradient"></div>
+          <div class="c-content">
+            <div class="c-icon">🛡️</div>
             <h3>Precision Guarantee</h3>
-            <p>Drive with absolute confidence. We offer a completely <strong>Free Alignment Follow-Up Check</strong> within 1 month or 2,000 km after your service to ensure your calibrations remain flawless.</p>
+            <p>Drive with absolute confidence. We offer a completely Free Alignment Follow-Up Check within 1 month.</p>
           </div>
         </div>
-
+      </div>
+      <div class="carousel-bottom-ui">
+        <button class="c-next-btn">Next Service ❯</button>
+        <div class="pill-timer"><div class="pill-timer-fill"></div></div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== WHY US ===================== -->
-  <section id="why">
+  <!-- GALLERY (CINEMATIC CAROUSEL) -->
+  <section id="gallery" style="background: var(--bg-deep); padding-bottom: 120px; overflow: hidden;">
     <div class="container">
-      <div class="text-center reveal" style="margin-bottom: 48px;">
-        <div class="section-eyebrow" style="justify-content:center">Warning Signs</div>
-        <h2 class="section-title">When To Visit Us?</h2>
-        <div class="section-divider"></div>
-        <p style="color: var(--text-secondary);">Watch for these common warning signs on your vehicle.</p>
-      </div>
-
-      <div class="why-grid" style="margin-bottom: 80px;">
-        <div class="float-card fluid-hover reveal shimmer-effect">
-          <h3 class="accent-text">🛞 Wheel Alignment</h3>
-          <ul class="clean-list">
-            <li>Vehicle drifts or pulls to one side</li>
-            <li>Uneven or rapid shoulder wear</li>
-            <li>Steering wheel sits crooked</li>
-            <li>Recommended every 5,000 KM</li>
-          </ul>
-        </div>
-        <div class="float-card fluid-hover reveal shimmer-effect" style="transition-delay:0.1s">
-          <h3 class="accent-text">⚙️ Wheel Balancing</h3>
-          <ul class="clean-list">
-            <li>Steering shake at highway speeds</li>
-            <li>Heavy cabin or seat vibration</li>
-            <li>Unexplained suspension fatigue</li>
-            <li>Required after every tyre swap</li>
-          </ul>
-        </div>
-        <div class="float-card fluid-hover reveal shimmer-effect" style="transition-delay:0.2s">
-          <h3 class="accent-text">🔧 Tubeless Repair</h3>
-          <ul class="clean-list">
-            <li>Nail puncture or visible debris</li>
-            <li>Frequent air pressure drops</li>
-            <li>Valve stem leakage</li>
-            <li>Crucial to prevent blowout damage</li>
-          </ul>
-          </ul>
-        </div>
-      </div>
-
-      <div class="text-center reveal" style="margin-bottom: 48px;">
-        <div class="section-eyebrow" style="justify-content:center">Our Promise</div>
-        <h2 class="section-title">Why Choose S.S Tyre Care?</h2>
-        <div class="section-divider"></div>
-      </div>
-
-      <div class="why-grid">
-        <div class="float-card fluid-hover reveal shimmer-effect text-center p-small">
-          <div class="card-icon" style="margin: 0 auto 20px; font-size: 28px;">🏆</div>
-          <h3 style="margin-bottom:12px">Master-Level Expertise</h3>
-          <p>Two decades of hands-on experience — we've seen and solved every alignment challenge imaginable. Your vehicle is in master hands.</p>
-        </div>
-        <div class="float-card fluid-hover reveal shimmer-effect text-center p-small" style="transition-delay:0.1s">
-          <div class="card-icon" style="margin: 0 auto 20px; font-size: 28px;">🎯</div>
-          <h3 style="margin-bottom:12px">Computerized Precision</h3>
-          <p>No guesswork. Our modern diagnostic equipment calibrates your wheels down to the millimeter for absolutely flawless handling.</p>
-        </div>
-        <div class="float-card fluid-hover reveal shimmer-effect text-center p-small" style="transition-delay:0.2s">
-          <div class="card-icon" style="margin: 0 auto 20px; font-size: 28px;">🤝</div>
-          <h3 style="margin-bottom:12px">Transparent Integrity</h3>
-          <p>Crystal-clear explanations, no hidden fees, and only the services your vehicle genuinely needs. Trust is our core component.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== GALLERY ===================== -->
-  <section id="gallery">
-    <div class="container">
-      <div class="text-center reveal" style="margin-bottom: 12px;">
+      <div class="text-center reveal" style="margin-bottom: 40px;">
         <div class="section-eyebrow" style="justify-content:center">Behind The Scenes</div>
         <h2 class="section-title">Workshop Showcase</h2>
         <div class="section-divider"></div>
       </div>
-      <p class="text-center reveal" style="margin-bottom:40px">Swipe or use the arrows to view our facility.</p>
+    </div>
 
-      <div class="slideshow-container reveal shimmer-effect">
-        <div class="slideshow-track" id="slideshowTrack">
-          <img src="images/gallery1.jpg"  alt="Workshop View 1"  class="slide-img" loading="lazy">
-          <img src="images/gallery2.jpg"  alt="Workshop View 2"  class="slide-img" loading="lazy">
-          <img src="images/gallery3.jpg"  alt="Workshop View 3"  class="slide-img" loading="lazy">
-          <img src="images/gallery4.jpg"  alt="Workshop View 4"  class="slide-img" loading="lazy">
-          <img src="images/gallery5.jpg"  alt="Workshop View 5"  class="slide-img" loading="lazy">
-          <img src="images/gallery6.jpg"  alt="Workshop View 6"  class="slide-img" loading="lazy">
-          <img src="images/gallery7.jpg"  alt="Workshop View 7"  class="slide-img" loading="lazy">
-          <img src="images/gallery8.jpg"  alt="Workshop View 8"  class="slide-img" loading="lazy">
-          <img src="images/gallery9.jpg"  alt="Workshop View 9"  class="slide-img" loading="lazy">
-          <img src="images/gallery10.jpg" alt="Workshop View 10" class="slide-img" loading="lazy">
-          <img src="images/gallery11.jpg" alt="Workshop View 11" class="slide-img" loading="lazy">
-          <img src="images/gallery12.jpg" alt="Workshop View 12" class="slide-img" loading="lazy">
-          <img src="images/gallery13.jpg" alt="Workshop View 13" class="slide-img" loading="lazy">
-          <img src="images/gallery14.jpg" alt="Workshop View 14" class="slide-img" loading="lazy">
-        </div>
-        <button class="slide-btn prev-slide" onclick="moveSlide(-1)" aria-label="Previous">❮</button>
-        <button class="slide-btn next-slide" onclick="moveSlide(1)"  aria-label="Next">❯</button>
+    <div class="cinematic-carousel">
+      <div class="c-track">
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery1.jpg'); background-color: #111;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery2.jpg'); background-color: #222;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery3.jpg'); background-color: #333;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery4.jpg'); background-color: #111;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery5.jpg'); background-color: #222;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery6.jpg'); background-color: #333;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery7.jpg'); background-color: #333;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery8.jpg'); background-color: #333;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery9.jpg'); background-color: #333;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery10.jpg'); background-color: #333;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery11.jpg'); background-color: #333;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery12.jpg'); background-color: #333;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery13.jpg'); background-color: #333;"></div></div>
+        <div class="c-card"><div class="c-bg" style="background-image: url('images/gallery14.jpg'); background-color: #333;"></div></div>
+      </div>
+      <div class="carousel-bottom-ui">
+        <button class="c-next-btn">Next Image ❯</button>
+        <div class="pill-timer"><div class="pill-timer-fill"></div></div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== BRANDS ===================== -->
-  <section id="brands">
+  <!-- WHY US -->
+  <section id="why" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 48px;">
+        <div class="section-eyebrow" style="justify-content:center">Our Promise</div>
+        <h2 class="section-title">Why Choose Us?</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="why-grid">
+        <div class="float-card fluid-hover text-center reveal p-small">
+          <div class="card-icon" style="margin: 0 auto 20px; font-size: 28px;">🏆</div>
+          <h3 style="margin-bottom:12px">Master-Level Expertise</h3>
+          <p>Two decades of hands-on experience. Your vehicle is in master hands.</p>
+        </div>
+        <div class="float-card fluid-hover text-center reveal p-small" style="transition-delay: 0.1s;">
+          <div class="card-icon" style="margin: 0 auto 20px; font-size: 28px;">🎯</div>
+          <h3 style="margin-bottom:12px">Computerized Precision</h3>
+          <p>Our modern diagnostic equipment calibrates down to the millimeter.</p>
+        </div>
+        <div class="float-card fluid-hover text-center reveal p-small" style="transition-delay: 0.2s;">
+          <div class="card-icon" style="margin: 0 auto 20px; font-size: 28px;">🤝</div>
+          <h3 style="margin-bottom:12px">Transparent Integrity</h3>
+          <p>Crystal-clear explanations and no hidden fees. Trust is our core component.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section id="brands" style="background: var(--bg-deep);">
     <div class="container">
       <div class="text-center reveal" style="margin-bottom: 48px;">
         <div class="section-eyebrow" style="justify-content:center">Partners</div>
         <h2 class="section-title">Trusted Tyre Brands</h2>
-        <div class="section-divider"></div>
       </div>
       <div class="brand-grid">
-        <div class="brand-card fluid-hover reveal"><img src="images/michelin.png"    alt="Michelin"></div>
-        <div class="brand-card fluid-hover reveal" style="transition-delay:0.1s"><img src="images/bridgestone.png" alt="Bridgestone"></div>
-        <div class="brand-card fluid-hover reveal" style="transition-delay:0.15s"><img src="images/goodyear.png"   alt="Goodyear"></div>
-        <div class="brand-card fluid-hover reveal" style="transition-delay:0.2s"><img src="images/apollo.png"     alt="Apollo Tyres"></div>
-        <div class="brand-card fluid-hover reveal" style="transition-delay:0.25s"><img src="images/ceat.png"      alt="CEAT"></div>
-        <div class="brand-card fluid-hover reveal" style="transition-delay:0.3s"><img src="images/mrf.png"        alt="MRF"></div>
+        <div class="brand-card fluid-hover reveal"><img src="images/michelin.png" alt="Michelin" onerror="this.outerHTML='<h3>Michelin</h3>'"></div>
+        <div class="brand-card fluid-hover reveal" style="transition-delay:0.1s"><img src="images/bridgestone.png" alt="Bridgestone" onerror="this.outerHTML='<h3>Bridgestone</h3>'"></div>
+        <div class="brand-card fluid-hover reveal" style="transition-delay:0.15s"><img src="images/goodyear.png" alt="Goodyear" onerror="this.outerHTML='<h3>Goodyear</h3>'"></div>
+        <div class="brand-card fluid-hover reveal" style="transition-delay:0.2s"><img src="images/apollo.png" alt="Apollo Tyres" onerror="this.outerHTML='<h3>Apollo</h3>'"></div>
+        <div class="brand-card fluid-hover reveal" style="transition-delay:0.25s"><img src="images/ceat.png" alt="CEAT" onerror="this.outerHTML='<h3>CEAT</h3>'"></div>
+        <div class="brand-card fluid-hover reveal" style="transition-delay:0.3s"><img src="images/mrf.png" alt="MRF" onerror="this.outerHTML='<h3>MRF</h3>'"></div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== DYNAMIC REVIEWS (API) ===================== -->
+  <!-- DYNAMIC REVIEWS (API) -->
   <section id="testimonials" style="background: var(--bg-surface);">
     <div class="container">
       <div class="text-center reveal" style="margin-bottom: 48px;">
         <div class="section-eyebrow" style="justify-content:center">What Our Customers Say</div>
         <h2 class="section-title">Real Feedback</h2>
         <div class="section-divider"></div>
-        <p style="color: var(--text-secondary); margin-top: 15px;">Real reviews powered by our local drivers.</p>
       </div>
-
       <div class="reviews-grid reveal" id="dynamicReviewsContainer">
         <p style="text-align:center; color: var(--text-secondary); grid-column: 1 / -1;">Loading top reviews...</p>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FEEDBACK ===================== -->
-  <section id="feedback">
+  <!-- FEEDBACK FORM -->
+  <section id="feedback" style="background: var(--bg-deep);">
     <div class="container">
       <div class="text-center reveal" style="margin-bottom:48px">
         <div class="section-eyebrow" style="justify-content:center">Your Voice</div>
-        <h2 class="section-title">Customer Feedback</h2>
+        <h2 class="section-title">Leave Feedback</h2>
         <div class="section-divider"></div>
       </div>
 
       <div class="contact-wrapper">
-        <div style="display:flex;flex-direction:column;gap:24px">
-          <div class="float-card fluid-hover reveal shimmer-effect" style="flex:1">
-            <h3 style="font-size:22px;margin-bottom:14px">Rate Your Pit Stop!</h3>
-            <p>We're obsessed with perfection, and your experience is our true benchmark. Did we deliver the smooth ride you expected? Every piece of feedback helps us elevate our standards for the community.</p>
-          </div>
-          <div class="float-card fluid-hover reveal shimmer-effect text-center" style="flex:1">
-            <h3 class="mb-4" style="font-size:18px">Support Our Local Business</h3>
-            <p style="margin-bottom:22px">If you loved our service, the best way to help us grow is by sharing your experience on Google.</p>
-            <a href="https://search.google.com/local/writereview?placeid=ChIJwctgvC5aqDsREwvKJ1gqfI8" target="_blank" class="btn btn-green w-100" style="font-size:14px">
-              ⭐⭐⭐⭐⭐   Leave a Google Review
-            </a>
-          </div>
-        </div>
-
-        <div class="float-card fluid-hover reveal shimmer-effect">
+        <div class="float-card fluid-hover reveal">
           <h3 class="mb-4">Submit Your Review</h3>
           <form class="clean-form" id="pageFeedbackForm">
             <input type="text" id="feedName" placeholder="Your Name" required>
             <select id="feedRating" required>
               <option value="" disabled selected>Select Rating</option>
-              <option value="5 Stars ⭐⭐⭐⭐⭐">5 Stars ⭐⭐⭐⭐⭐</option>
-              <option value="4 Stars ⭐⭐⭐⭐">4 Stars ⭐⭐⭐⭐</option>
-              <option value="3 Stars ⭐⭐⭐">3 Stars ⭐⭐⭐</option>
-              <option value="2 Stars ⭐⭐">2 Stars ⭐⭐</option>
-              <option value="1 Star ⭐">1 Star ⭐</option>
+              <option value="5">5 Stars ⭐⭐⭐⭐⭐</option>
+              <option value="4">4 Stars ⭐⭐⭐⭐</option>
+              <option value="3">3 Stars ⭐⭐⭐</option>
+              <option value="2">2 Stars ⭐⭐</option>
+              <option value="1">1 Star ⭐</option>
             </select>
             <textarea id="feedMessage" rows="4" placeholder="Tell us about your visit..." required></textarea>
             <button type="submit" class="btn btn-green w-100">Send Feedback</button>
           </form>
         </div>
+        <div class="float-card fluid-hover reveal text-center" style="display:flex; flex-direction:column; justify-content:center;">
+           <h3 class="mb-4">Support Local Business</h3>
+           <p style="color: var(--text-secondary); margin-bottom: 24px;">If you loved our service, the best way to help us grow is by sharing your experience publicly on Google.</p>
+           <a href="https://search.google.com/local/writereview?placeid=ChIJwctgvC5aqDsREwvKJ1gqfI8" target="_blank" class="btn btn-outline-green glow-btn" style="margin-top: 24px;">
+             ⭐⭐⭐⭐⭐ Leave a Google Review
+           </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== CONTACT ===================== -->
-  <section id="contact">
-    <div class="container">
-      <div class="text-center reveal" style="margin-bottom:48px">
+  <!-- CONTACT / BOOKING -->
+  <section id="contact" style="background: var(--bg-surface);">
+    <div class="container reveal">
+      <div class="text-center" style="margin-bottom:48px">
         <div class="section-eyebrow" style="justify-content:center">Get In Touch</div>
         <h2 class="section-title">Book a Service</h2>
         <div class="section-divider"></div>
       </div>
-
       <div class="contact-wrapper">
         <div class="contact-column">
-          <div class="float-card fluid-hover reveal shimmer-effect">
+          <div class="float-card fluid-hover">
             <h3 class="mb-4" style="font-size:18px">Send Inquiry</h3>
             <form class="clean-form" id="pageWhatsappForm">
-              <input type="text"  id="name"    placeholder="Your Name"    required>
-              <input type="tel"   id="mobile"  placeholder="Mobile Number" required>
-              <textarea           id="message" rows="4" placeholder="Describe your vehicle issue..." required></textarea>
-              <button type="submit" class="btn btn-green w-100">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Send via WhatsApp
-              </button>
+              <input type="text" id="name" placeholder="Your Name" required>
+              <input type="tel" id="mobile" placeholder="Mobile Number" required>
+              <textarea id="message" rows="4" placeholder="Describe your vehicle issue..." required></textarea>
+              <button type="submit" class="btn btn-green w-100">Send via WhatsApp</button>
             </form>
           </div>
         </div>
-
         <div class="contact-column">
-          <div class="float-card fluid-hover reveal shimmer-effect">
+          <div class="float-card fluid-hover">
             <h3 style="margin-bottom:24px;font-size:18px">Workshop Details</h3>
             <div class="contact-info">
-              <p><strong>👨‍🔧 Founder:</strong>  Suresh Kumar</p>
-              <p><strong>📞 Mobile:</strong>  +91 9842238460</p>
-              <p><strong>✉️ Email:</strong>  <a href="mailto:sstcsuresh@gmail.com" class="map-link">sstcsuresh@gmail.com</a></p>
-              <p><strong>📍 Location:</strong>  <a href="https://www.google.com/maps/search/?api=1&query=LIC+Colony,+Pollachi+Main+Road,+Sundarapuram,+Coimbatore" target="_blank" class="map-link">LIC Colony, Pollachi Main Road,<br>Sundarapuram, Coimbatore - 641021</a></p>
-              <p><strong>🕐 Hours:</strong>  Mon–Sat: 9:30 AM – 8 PM</p>
-            </div>
-            <div style="margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border);">
-              <a href="https://wa.me/919842238460" target="_blank" class="btn btn-outline-green w-100">
-                WhatsApp Us Directly
-              </a>
+              <p><strong>👨‍🔧 Founder:</strong> Suresh Kumar</p>
+              <p><strong>📞 Mobile:</strong> +91 9842238460</p>
+              <p><strong>✉️ Email:</strong> sstcsuresh@gmail.com</p>
+              <p><strong>📍 Location:</strong> LIC Colony, Pollachi Main Road, Sundarapuram, Coimbatore - 641021</p>
+              <p><strong>🕐 Hours:</strong> Mon–Sat: 9:30 AM – 8 PM</p>
             </div>
           </div>
         </div>
@@ -489,7 +383,7 @@
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -504,45 +398,39 @@
     </div>
   </footer>
 
-  <!-- ===================== BOOKING MODAL ===================== -->
+  <!-- MODALS -->
   <div class="modal-overlay" id="bookingModal">
     <div class="modal-content shimmer-effect">
-      <button class="close-modal" onclick="closeModal('bookingModal')">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
+      <button class="close-modal" onclick="closeModal('bookingModal')">✖</button>
       <div style="margin-bottom: 28px;">
         <div class="section-eyebrow">Quick Service</div>
-        <h3 style="font-size:26px;font-weight:800;color:var(--text-primary);letter-spacing:-0.5px">Book a Service</h3>
+        <h3 style="font-size:26px;font-weight:800;color:var(--text-primary);">Book a Service</h3>
       </div>
       <form class="clean-form" id="modalWhatsappForm">
-        <input type="text" id="modalName"    placeholder="Your Name"          required>
-        <input type="tel"  id="modalMobile"  placeholder="Mobile Number"      required>
-        <textarea          id="modalMessage" rows="3" placeholder="Describe the vehicle issue..." required></textarea>
-        <button type="submit" class="btn btn-green w-100">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Send via WhatsApp
-        </button>
+        <input type="text" id="modalName" placeholder="Your Name" required>
+        <input type="tel" id="modalMobile" placeholder="Mobile Number" required>
+        <textarea id="modalMessage" rows="3" placeholder="Describe the vehicle issue..." required></textarea>
+        <button type="submit" class="btn btn-green w-100">Send via WhatsApp</button>
       </form>
     </div>
   </div>
 
-  <!-- ===================== FEEDBACK MODAL ===================== -->
   <div class="modal-overlay" id="feedbackModal">
     <div class="modal-content shimmer-effect">
-      <button class="close-modal" onclick="closeModal('feedbackModal')">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
+      <button class="close-modal" onclick="closeModal('feedbackModal')">✖</button>
       <div style="margin-bottom: 28px;">
         <div class="section-eyebrow">Your Experience</div>
-        <h3 style="font-size:26px;font-weight:800;color:var(--text-primary);letter-spacing:-0.5px">Submit Feedback</h3>
+        <h3 style="font-size:26px;font-weight:800;color:var(--text-primary);">Submit Feedback</h3>
       </div>
       <form class="clean-form" id="modalFeedbackForm">
-        <input type="text" id="modalFeedName"   placeholder="Your Name"    required>
-        <select            id="modalFeedRating" required>
+        <input type="text" id="modalFeedName" placeholder="Your Name" required>
+        <select id="modalFeedRating" required>
           <option value="" disabled selected>Select Rating</option>
           <option value="5">5 Stars ⭐⭐⭐⭐⭐</option>
           <option value="4">4 Stars ⭐⭐⭐⭐</option>
           <option value="3">3 Stars ⭐⭐⭐</option>
+          <option value="2">2 Stars ⭐⭐</option>
+          <option value="1">1 Star ⭐</option>
         </select>
         <textarea id="modalFeedMessage" rows="3" placeholder="Tell us about your visit..." required></textarea>
         <button type="submit" class="btn btn-green w-100">Submit Review</button>
@@ -550,17 +438,15 @@
     </div>
   </div>
 
-  <!-- ===================== FLOATING BUTTONS (WITH HINTS) ===================== -->
+  <!-- FLOATING BUTTONS -->
   <div class="floating-group">
     <div class="float-btn-wrapper">
       <div class="float-hint">Rate Your Visit</div>
-      <button class="floating-feedback" onclick="openModal('feedbackModal')" aria-label="Leave Feedback">⭐</button>
+      <button class="floating-feedback" onclick="openModal('feedbackModal')">⭐</button>
     </div>
     <div class="float-btn-wrapper">
-      <div class="float-hint">Book a Service</div>
-      <button class="floating-wa" onclick="openModal('bookingModal')" aria-label="Book Service">
-        <img src="images/whatsapp.png" alt="WhatsApp">
-      </button>
+      <div class="float-hint">WhatsApp Us</div>
+      <button class="floating-wa" onclick="openModal('bookingModal')">💬</button>
     </div>
   </div>
 
